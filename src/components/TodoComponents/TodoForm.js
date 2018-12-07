@@ -19,7 +19,7 @@ class TodoForm extends React.Component {
             type="text"
             onChange={this.setText} 
             value={textInput} />
-            <button onClick={() => onAddTask(textInput)} >
+            <button onClick={() => {onAddTask(textInput); this.setState({textInput: ''})}} >
                 Add Task
             </button> 
             <button onClick={onClearCompleted}>Remove completed tasks</button>
